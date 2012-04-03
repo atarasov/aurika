@@ -1,0 +1,21 @@
+<% title "Заявка" %>
+
+<% form_for(@contact) do |f| %>
+  <%= f.error_messages %>
+
+    <p style="color:white; margin-top:20px; margin-bottom:20px;">
+      Сдесь вы можете пригласить Аурику на ваше торжество
+    </p>
+
+  <p style="color:white; margin-top:20px; margin-bottom:20px;">
+    <%= f.label "Контактый телефон" %><br /><br />
+    <%= f.text_field :title %>
+  </p>
+  <p style="color:white;">
+   <%= fckeditor_textarea("contact", "description", :toolbarSet => 'Default', :width => '100%', :height => '300px') %>
+  </p>  <p>
+    <%= f.submit 'Добавить приглашение' %>
+  </p>
+<% end %>
+
+<%= link_to 'Вернуться', new_contact_path %>

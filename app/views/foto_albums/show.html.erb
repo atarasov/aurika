@@ -1,0 +1,48 @@
+<% title_tag "Просмотр альбома" %>
+<% meta_keywords_tag "Просмотр альбомов" %>
+<h1><%= h @foto_album.title %></h1>
+<p>
+  <b>Title:</b>
+  <%= h @foto_album.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= h @foto_album.description %>
+</p>
+
+<h1>Список фотографий</h1>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#photo_list a").fancybox({
+        overlayShow: true,
+        overlayOpacity: 0.5,
+        zoomSpeedIn: 1500,
+        zoomSpeedOut:600
+    });
+});
+</script>
+
+
+<span class="foto_item">
+<% @fotos.each do |foto| %>
+    <div id="photo_list">
+      <%= link_to image_tag(foto.foto.url(:preveiw)), foto.foto.url(:thumb), :rel=>"fancy-tour", :title => foto.title ,:class => "foto_#{foto.id}"%>
+        <% if logged_in? -%>
+        <span>
+        <p><%= link_to 'Показать', foto %></p>
+    <p><%= link_to 'Редактировать', edit_foto_path(foto) %></p>
+    <p><%= link_to 'Удалить', foto, :confirm => 'Вы уверенны что хотите удалить фотографию?', :method => :delete %></p>
+    </span>
+        <% end %>
+    </div>
+<% end %>
+</span>
+
+<% if logged_in? -%>
+    <span>
+    <%= link_to 'Edit', edit_foto_album_path(@foto_album) %> |
+    <%= link_to 'Back', foto_albums_path %>
+    </span>    
+<% end %>

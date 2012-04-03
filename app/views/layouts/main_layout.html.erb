@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta name="verify-reformal" content="b51c7cfb3e0456e42580abaa" />
+  <title>Аурика Цуркан - пензенская федерация восточного танца, <%= yield(:title) %> </title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="google-site-verification" content="-1z544lkpdl8q56AAGEc9jm0j8fY-iQMpWXFM8fcOIE" />
+  <meta name="keywords" content="Аурика Цуркан,  восточные танцы Пенза, Бахор Пенза, школа восточного танца бахор, Аурика пенза, пензенская федерация восточного танца"/>
+  <meta name="description" content="Аурика Цуркан,  восточные танцы Пенза, Бахор Пенза, школа восточного танца бахор, Аурика пенза, пензенская федерация восточного танца"/>
+  <meta name='yandex-verification' content='64f98bb3fc5121ec' />
+
+  <%= stylesheet_link_tag "style" %>
+  <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'fancy' %>
+  <%#= javascript_include_tag :fckeditor %>
+  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag "jquery.fancybox",
+                             "jquery.pngFix.pack",
+                             "jquery.metadata",
+                             "jquery.tools.min"
+  %>
+
+  <%= yield :head -%>
+  </head>
+
+<body>
+
+<div class="header">
+   <span class="aurika"></span>
+</div>
+<%= render :partial => 'shared/menu' %>
+<div class="content">
+
+
+      <div class="sub_content">
+      <%= yield %>
+      </div>
+</div>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2687456701853743";
+/* aurika */
+google_ad_slot = "8182698030";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<div class="footer">
+  <div class="sub_footer">
+  <%= render :partial => 'shared/footer' %>
+</div>
+</div>
+
+</body>
+</html>

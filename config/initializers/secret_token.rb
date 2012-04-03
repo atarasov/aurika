@@ -1,0 +1,2 @@
+# coding: utf-8
+AuricaCurkan::Application.config.secret_token = 'a39e532db057e613fb4dff369212ab81e0d1f44a368daa8fee647351576344fa015ecb0c6100ca997fc2a70445555c0c637967cec2cf8969deeceadd97453fed'

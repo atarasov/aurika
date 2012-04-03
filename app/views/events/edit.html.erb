@@ -1,0 +1,19 @@
+<% title "Редактирование новости" %>
+
+<% form_for(@event) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+    <p>
+<%= fckeditor_textarea("event", "description", :toolbarSet => 'Default', :width => '100%', :height => '200px') %>
+    </p>
+    <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @event %> |
+<%= link_to 'Back', events_path %>

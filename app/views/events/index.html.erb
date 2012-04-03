@@ -1,0 +1,27 @@
+<% title_tag "Новости" %>
+
+<% meta_keywords_tag "Новости" %>
+<h1>Новости</h1>
+<%= will_paginate @events %>
+<div class="news_content">
+<% if logged_in? -%>
+<p><%= link_to 'Добавить новость', new_event_path %><br/></p>
+<% end %>
+<% @events.each do |event| %>
+    <div class="content_body">
+      <h3><%=h event.title %></h3>
+      <%= event.description %>
+      <% if logged_in? -%>
+      <span class="edit">
+        <%= link_to 'Посмотреть', event %>
+        <%= link_to 'Редактировать', edit_event_path(event) %>
+        <%= link_to 'Удалить', event, :confirm => 'Вы уверенны?', :method => :delete %>
+      </span>
+      <% end %>
+    </div>
+<% end %>
+<% if logged_in? -%>
+<p><%= link_to 'Добавить новость', new_event_path %></p>
+<% end %>      
+</div>
+<%= will_paginate @events %>

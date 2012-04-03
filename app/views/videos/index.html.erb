@@ -1,0 +1,45 @@
+<% title "Список видео" %>
+
+<div class="media_content">
+
+
+
+
+  <div class="media_item_video">
+    <iframe width="420" height="315" src="http://www.youtube.com/embed/Dcy1tEkYDYA" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div class="media_item_video">
+    <iframe width="420" height="315" src="http://www.youtube.com/embed/YdqKhHENzbo" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div class="media_item_video">
+    <iframe width="420" height="315" src="http://www.youtube.com/embed/gUL9_spzug4" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div class="media_item_video">
+    <iframe width="420" height="315" src="http://www.youtube.com/embed/bBFS4Wax08Y" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div class="media_item_video">
+    <iframe width="420" height="315" src="http://www.youtube.com/embed/-0QQqx4tX4w" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div class="media_item_video">
+
+    <OBJECT width="470" height="353">
+      <PARAM name="movie" value="http://video.rutube.ru/a33b564a5cfffbcbb57e48554767d705"></PARAM>
+      <PARAM name="wmode" value="window"></PARAM>
+      <PARAM name="allowFullScreen" value="true"></PARAM>
+      <EMBED src="http://video.rutube.ru/a33b564a5cfffbcbb57e48554767d705"
+             type="application/x-shockwave-flash"
+             wmode="window"
+             width="470"
+             height="353"
+             allowFullScreen="true" >
+
+      </EMBED>
+    </OBJECT>
+
+  </div>
+</div>
+<br/>
+<% if logged_in? -%>
+    <%= link_to 'New video', new_video_path %>
+<% end %>

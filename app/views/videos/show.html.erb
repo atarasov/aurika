@@ -1,0 +1,14 @@
+<% title "Просмотр видео" %>
+<p>
+  <b>Title:</b>
+  <%=h @video.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @video.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_video_path(@video) %> |
+<%= link_to 'Back', videos_path %>

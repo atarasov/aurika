@@ -1,0 +1,25 @@
+<h1>Listing collectives</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+
+<% @collectives.each do |collective| %>
+  <tr>
+    <td><%=h collective.title %></td>
+    <td><%=h collective.description %></td>
+    <% if logged_in? -%>
+    <td><%= link_to 'Show', collective %></td>
+    <td><%= link_to 'Edit', edit_collective_path(collective) %></td>
+    <td><%= link_to 'Destroy', collective, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<% if logged_in? -%>
+<%= link_to 'New collective', new_collective_path %>
+<% end %>

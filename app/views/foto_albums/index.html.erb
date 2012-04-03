@@ -1,0 +1,27 @@
+<% title_tag "Просмотр альбомов" %>
+<% meta_keywords_tag "Просмотр альбомов" %>
+<h1>Фотографии - альбомы</h1>
+<% if logged_in? -%>
+<%= link_to '+ Создать новый альбом', new_foto_album_path %>
+    <% end %>
+<%= will_paginate @foto_albums %>
+<div class="media_content">
+<% @foto_albums.each do |foto_album| %>
+
+    <div class="media_item">
+      <% if foto_album.fotos.present? %>
+      <%= link_to image_tag(foto_album.fotos[rand(foto_album.fotos.count)].foto.url(:preveiw), :title => foto_album.title), foto_album %><br/>
+      <% end %>    
+      <p><%=h foto_album.title %></p>
+      <% if logged_in? -%>
+      <p>
+        <%= link_to 'Редактировать', edit_foto_album_path(foto_album) %>
+        <%= link_to 'Удалить', foto_album, :confirm => 'Вы уверенны что хотите удалить альбом?', :method => :delete %>
+      </p>
+      <% end %>    
+    </div>
+
+<% end %>
+</div>
+
+<%= will_paginate @foto_albums %>

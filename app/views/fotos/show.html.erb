@@ -1,0 +1,17 @@
+<% title "Просмотр фото" %>
+<h1>Фотография - <%=h @foto.title %></h1>
+<p>
+  <b>Название:</b>
+  <%=h @foto.title %>
+</p>
+
+<p>
+  <b></b>
+  <% #raise @foto.foto.inspect  %>
+  <%= image_tag @foto.foto.url(:thumb) %>
+</p>
+
+<% if logged_in? -%>
+<%= link_to 'Редактировать', edit_foto_path(@foto) %> |
+<%= link_to 'Вернуться к списку', fotos_path %>
+<% end %>

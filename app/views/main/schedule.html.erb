@@ -1,0 +1,56 @@
+<% title_tag "Расписание занятий" %>
+
+<% meta_keywords_tag "Расписание занятий" %>
+
+  <script src="http://api-maps.yandex.ru/1.1/index.xml?key=ABCk_0sBAAAA370CZwIAjB99fpKMZz40MdGecRh32F6moZgAAAAAAAAAAAArDRpHVR_l-9V07nnUWM2Q_QhpmA==" type="text/javascript"></script>
+   <!--<script src="http://api-maps.yandex.ru/1.1/index.xml?key=AJLa_0sBAAAAPntGEQQA3tIwbZ3hnwoTutmL12XC_bZftQoAAAAAAAAAAAAE07pui7i-Iq1mE9Tt5M79aV6Q5g=="type="text/javascript"></script>-->
+
+<script type="text/javascript">
+  window.onload = function () {
+    var smallZoomControl = new YMaps.SmallZoom();
+
+    var smallZoomControl2 = new YMaps.SmallZoom();
+    var smallZoomControl3 = new YMaps.SmallZoom();
+    var map = new YMaps.Map(document.getElementById("sheld_item1"));
+    map.setCenter(new YMaps.GeoPoint(44.97844, 53.214335), 15);
+    var placemark = new YMaps.Placemark(new YMaps.GeoPoint(44.97844, 53.214335));
+    placemark.setIconContent('ул. Островского 9,');
+    placemark.description = "Пн, Пт 19-00";
+    map.addOverlay(placemark);
+    map.addControl(smallZoomControl, new YMaps.ControlPosition(YMaps.ControlPosition.TOP_LEFT, new YMaps.Point(5, 10)));
+
+    var map2 = new YMaps.Map(document.getElementById("sheld_item2"));
+    map2.setCenter(new YMaps.GeoPoint(44.962288, 53.223916), 15);
+    var placemark_2 = new YMaps.Placemark(new YMaps.GeoPoint(44.962288, 53.223916));
+    placemark_2.setIconContent('Проспект Победы 69');
+    placemark_2.description = "Вторник, Четверг 18-00";
+    map2.addOverlay(placemark_2);
+    map2.addControl(smallZoomControl2, new YMaps.ControlPosition(YMaps.ControlPosition.TOP_LEFT, new YMaps.Point(5, 10)));
+
+    var map3 = new YMaps.Map(document.getElementById("sheld_item3"));
+    map3.setCenter(new YMaps.GeoPoint(45.024694, 53.187181), 15);
+    var placemark_3 = new YMaps.Placemark(new YMaps.GeoPoint(45.024694, 53.187181));
+    placemark_3.setIconContent('Набережная реки Пензы 3а');
+    placemark_3.description = "Ср 19-00, Сб 10-00";
+    map3.addOverlay(placemark_3);
+    map3.addControl(smallZoomControl3, new YMaps.ControlPosition(YMaps.ControlPosition.TOP_LEFT, new YMaps.Point(5, 10)));
+}
+
+</script>
+
+<h1>Расписание занятий</h1>
+
+<table class="schedule" cellpadding="20px">
+  <tr>
+    <td style="width:200px"><p>Понедельник, Пятница 19-00</p><p>Адрес: г.Пенза ул. Островского 9, клуб "Грааль" ост. магазин "Буратино" - Центр Развития Творчества Детей и Юношества</p></td>
+    <td><div id="sheld_item1" style="width:500px;height:300px;color:black;"></div></td>
+  </tr>
+  <tr>
+    <td style="width:200px; color:black;"><p>Вторник, Четверг 18-00</p><p>Адрес: г.Пенза Проспект Победы 69 спорткомплекс "Горизонт" ост. "Тяжпромарматура"</p></td>
+    <td><div id="sheld_item2" style="width:500px;height:300px;color:black;"></div></td>
+  </tr>
+  <tr>
+    <td style="width:200px; color:black;"><p>Среда 19-00, Суббота 10-00</p>Адрес: г.Пенза ул. Набережная реки Пензы 3а (территория архитектурно строительного колледжа рядом с рестораном "Бочка")<p> </p></td>
+    <td><div id="sheld_item3" style="width:500px;height:300px;color:black;"></div></td>
+  </tr>
+</table>

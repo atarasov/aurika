@@ -1,0 +1,37 @@
+ru:
+  activerecord:
+
+
+    models:
+      collective: "Коллективы"
+      foto: "Фотографии"
+      foto_album: "Фото альбомы"
+      news: "Новости"
+      video: "Видео"
+      user: "Пользователь"
+
+
+    attributes:
+      user:
+        login: "Логин"
+        email: "Электронная почта"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        current_password: "Текущий пароль"
+
+      foto:
+        title: "Заголовок"
+        description: "Описание"
+        foto: "Фотография"
+
+      event:
+        title: "Заголовок"
+        description: "Описание"
+
+      video:
+        title: "Заголовок"
+        description: "Описание"
+
+      foto_album:
+        title: "Заголовок"
+        description: "Описание"

@@ -1,0 +1,52 @@
+<% title "Редактирование альбома" %>
+
+<% form_for(@foto_album) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :size => "34x5" %>
+  </p>
+  <p>
+    <%= f.submit 'Сохранить' %>
+  </p>
+<% end %>
+   <ul id="assets" class="photo">
+   </ul>
+   <iframe id='upload_frame' name="upload_frame" style="width:1px;height:1px;border: 0px solid white;"></iframe>
+
+
+<% for  ma_element in @fotos -%>
+<%= image_tag(ma_element.foto.url(:mini)) %><br>
+<% end -%>
+<ul id="mlt_elements" class="photo">
+    </ul>
+ <% form_for(:foto, @foto, :url => {:controller =>"fotos", :action => "create_foto",:foto_album_id => @foto_album }, :html => { :multipart => true, :target=>'upload_frame' }) do |f| %>
+    <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :size => "34x5" %>
+  </p>
+    <p>
+    <%= f.file_field :foto %>
+    </p>
+    <p>
+    <%= submit_tag 'Загрузить' %>
+    </p>
+  <% end %>
+
+
+
+
+<%= link_to 'Просмотр', @foto_album %> |
+<%= link_to 'Назад', foto_albums_path %>
+
+
+

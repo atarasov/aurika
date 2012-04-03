@@ -1,0 +1,27 @@
+<% title "Список фотографий" %>
+<h1>Список фотографий</h1>
+<table>
+  <tr>
+    <th>Название</th>
+    <th></th>
+  </tr>
+
+<% @fotos.each do |foto| %>
+  <tr>
+    <td><%=h foto.title %></td>
+    <td><%= image_tag foto.foto.url(:mini) %></td>
+    <% if logged_in? -%>
+    <td><%= link_to 'Показать', foto %></td>
+    <td><%= link_to 'Редактировать', edit_foto_path(foto) %></td>
+    <td><%= link_to 'Удалить', foto, :confirm => 'Вы уверенны что хотите удалить фотографию?', :method => :delete %></td>
+    <% end %>
+        </tr>
+<% end %>
+</table>
+
+<br />
+
+
+
+
+<%= link_to 'Добавить еще фотографию', new_foto_path %>
