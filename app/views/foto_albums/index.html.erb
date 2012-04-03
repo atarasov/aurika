@@ -1,9 +1,9 @@
 <% title_tag "Просмотр альбомов" %>
 <% meta_keywords_tag "Просмотр альбомов" %>
 <h1>Фотографии - альбомы</h1>
-<% if logged_in? -%>
-<%= link_to '+ Создать новый альбом', new_foto_album_path %>
-    <% end %>
+<%# if logged_in? -%>
+<%#= link_to '+ Создать новый альбом', new_foto_album_path %>
+    <%# end %>
 <%= will_paginate @foto_albums %>
 <div class="media_content">
 <% @foto_albums.each do |foto_album| %>
