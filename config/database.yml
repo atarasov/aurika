@@ -41,10 +41,10 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: aurika_prod
+  database: lexakors_aurik68
   pool: 5
-  username: aurika_prod
-  password: aurika12345
-  host: localhost
-  port: 3306
+  username: lexakors_aurik68
+  password: SqUAXPXh
+  host: mysql0.locum.ru
+
 

@@ -17,8 +17,6 @@ gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git', :branch =>
 gem 'capistrano'
 gem 'unicorn'
 
-
-gem 'capistrano'#, "=2.5.17"
 gem 'i18n'
 gem 'mail'
 gem 'tzinfo'
