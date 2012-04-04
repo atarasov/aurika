@@ -29,20 +29,8 @@
 <% @fotos.each do |foto| %>
     <div id="photo_list">
       <%= link_to image_tag(foto.foto.url(:preveiw)), foto.foto.url(:thumb), :rel=>"fancy-tour", :title => foto.title ,:class => "foto_#{foto.id}"%>
-        <% if logged_in? -%>
-        <span>
-        <p><%= link_to 'Показать', foto %></p>
-    <p><%= link_to 'Редактировать', edit_foto_path(foto) %></p>
-    <p><%= link_to 'Удалить', foto, :confirm => 'Вы уверенны что хотите удалить фотографию?', :method => :delete %></p>
-    </span>
-        <% end %>
+
     </div>
 <% end %>
 </span>
 
-<% if logged_in? -%>
-    <span>
-    <%= link_to 'Edit', edit_foto_album_path(@foto_album) %> |
-    <%= link_to 'Back', foto_albums_path %>
-    </span>    
-<% end %>
