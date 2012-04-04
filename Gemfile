@@ -12,7 +12,7 @@ gem 'machinist'
 gem 'mysql2', '~> 0.2.7'
 gem "rack",  "1.2.5"
 gem 'jquery-rails'
-gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git', :branch => 'rails-3.0'
+gem 'rails_admin'#, :git => 'git://github.com/sferik/rails_admin.git', :branch => 'rails-3.0'
 
 gem 'capistrano'
 gem 'unicorn'
