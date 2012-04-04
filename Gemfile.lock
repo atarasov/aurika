@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/sferik/rails_admin.git
+  revision: 4af3fc415456ac00aeaa1c56bf1869234524b50f
+  branch: rails-3.0
+  specs:
+    rails_admin (0.0.1)
+      builder (~> 2.1.0)
+      haml (>= 3.1.0, < 3.3.0)
+      rails (~> 3.0.11)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -47,6 +57,7 @@ GEM
     erubis (2.6.6)
       abstract (>= 1.0.0)
     fastthread (1.0.7)
+    haml (3.1.4)
     highline (1.6.11)
     i18n (0.5.0)
     jquery-rails (1.0.19)
@@ -91,7 +102,6 @@ GEM
       activesupport (= 3.0.11)
       bundler (~> 1.0)
       railties (= 3.0.11)
-    rails_admin (0.0.0)
     railties (3.0.11)
       actionpack (= 3.0.11)
       activesupport (= 3.0.11)
@@ -134,7 +144,7 @@ DEPENDENCIES
   paperclip
   rack (= 1.2.5)
   rails (= 3.0.11)
-  rails_admin
+  rails_admin!
   rake
   russian
   tzinfo
