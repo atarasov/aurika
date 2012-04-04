@@ -41,10 +41,10 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: lexakors_aurik75
+  database: lexakors_aurik14
   pool: 5
-  username: lexakors_aurik75
-  password: APoi3C6I
+  username: lexakors_aurik14
+  password: uuiNf2RJ
   host: mysql0.locum.ru
 
 
