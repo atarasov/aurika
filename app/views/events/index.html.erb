@@ -9,7 +9,6 @@
     <div class="content_body">
       <h3><%=h event.title %></h3>
       <%= event.description %>
-      <% if logged_in? -%>
       <span class="edit">
         <%= link_to 'Посмотреть', event %>
         <%= link_to 'Редактировать', edit_event_path(event) %>
