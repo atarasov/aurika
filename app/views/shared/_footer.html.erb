@@ -1,5 +1,6 @@
 <p>© 2010-2011 Аурика Цуркан, г. Пенза. При поддержке <%= link_to "Denzhakov.ru", "http://denzhakov.ru/" %></p>
-<div class="counters">
+<% if  Rails.env.production?  %>
+    <div class="counters">
 
 <!--LiveInternet counter--><script type="text/javascript"><!--
 document.write("<a href='http://www.liveinternet.ru/click' "+
@@ -39,3 +40,4 @@ pageTracker._trackPageview();
 } catch(err) {}</script>
   <!--/google-analytics-->
 </div>
+<% end %>

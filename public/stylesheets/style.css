@@ -2,10 +2,11 @@ body {
     paddingb: 0;
     margin: 0;
     width: 100%;
-    min-width: 900px;
+    min-width: 960px;
     font-family: verdana, arial;
     font-size: 13px;
     line-height: 120%;
+    background-color: #c0c0c0;
 }
 
 h1 {
@@ -22,13 +23,25 @@ pre {
     padding: 10px;
     font-size: 11px;
 }
-
-.header {
-    height: 100px;
-    width: 100%;
+#advert{width: 960px;
     margin: 0 auto;
     position: relative;
-    background-color: #dadada /*border-bottom: 1px solid;*/
+}
+#advert iframe{margin: 0 auto !important;
+    position: relative !important;}
+.header {
+    height: 100px;
+    width: 960px;
+    margin: 0 auto;
+    margin-top: 15px;
+    position: relative;
+    background-color: #dadada; /*border-bottom: 1px solid;*/
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Firefox */
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Safari и Chrome */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
 }
 
 .menu {
@@ -42,8 +55,15 @@ pre {
     height: 90px;
     position: relative;
     margin: 0 auto;
+    margin-bottom: 20px;
     text-align: center;
-    width: 100%;
+    width: 960px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Firefox */
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Safari и Chrome */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
 
 }
 
@@ -72,10 +92,16 @@ pre {
     z-index: 1;
     overflow: hidden;
     min-height: 900px;
-    width: 100%;
+    width: 960px;
     margin: 0 auto;
     border: 0px;
     background: url(/images/i01.jpg) repeat-x scroll center top #dadada;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Firefox */
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Safari и Chrome */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
 }
 
 .footer {

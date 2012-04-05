@@ -41,6 +41,8 @@
       <%= yield %>
       </div>
 </div>
+<% if  Rails.env.production?  %>
+<div id="advert">
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-2687456701853743";
 /* aurika */
@@ -48,10 +50,13 @@ google_ad_slot = "8182698030";
 google_ad_width = 468;
 google_ad_height = 60;
 //-->
+
 </script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
+  <script type="text/javascript"
+          src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script>
+</div>
+<% end %>
 <div class="footer">
   <div class="sub_footer">
   <%= render :partial => 'shared/footer' %>
