@@ -1,5 +1,6 @@
 # coding: utf-8
 AuricaCurkan::Application.routes.draw do
+
   devise_for :users do
     get "sign_in", :to => "devise/sessions#new"
 
@@ -24,6 +25,7 @@ AuricaCurkan::Application.routes.draw do
     match '/help' => 'main#help', :as => :help
     match '/dance' => 'main#about_dance', :as => :about_dance_index
     resources :videos
+    resources :publications
     resources :foto_albums
     resources :collectives
     resources :fotos do

@@ -1,6 +1,8 @@
 # coding: utf-8
 class MainController < ApplicationController
   def index
+    @events = Event.limit(5)
+    @publications = Publication.limit(5)
   end
 
   def about

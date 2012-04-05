@@ -1,17 +1,12 @@
 <% title_tag "Просмотр альбома" %>
 <% meta_keywords_tag "Просмотр альбомов" %>
-<h1><%= h @foto_album.title %></h1>
-<p>
-  <b>Title:</b>
-  <%= h @foto_album.title %>
-</p>
+<h1><%= @foto_album.title %></h1>
 
 <p>
-  <b>Description:</b>
-  <%= h @foto_album.description %>
+
+  <%= @foto_album.description %>
 </p>
 
-<h1>Список фотографий</h1>
 
 <script type="text/javascript">
   $(document).ready(function() {

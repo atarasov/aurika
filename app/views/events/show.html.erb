@@ -1,13 +1,10 @@
 <% title "Просмотр новости" %>
-
+<br />
+<div class="content_body">
   <h1><%= @event.title %>  </h1>
 
 
 <p>
-  <%= @event.description %>
+  <%= @event.description.html_safe %>
 </p>
-
-<% if logged_in? -%>
-<%= link_to 'Редактировать', edit_event_path(@event) %> |
-<%= link_to 'Вернуться', events_path %>
-<% end %>
+</div>

@@ -8,7 +8,7 @@
 <% @events.each do |event| %>
     <div class="content_body">
       <h3><%=h event.title %></h3>
-      <%= event.description %>
+      <%=  event.description.html_safe %>
 
     </div>
 <% end %>

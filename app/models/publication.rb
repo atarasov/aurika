@@ -1,8 +1,5 @@
-# coding: utf-8
-class Event < ActiveRecord::Base
-  cattr_reader :per_page
-  @@per_page = 10
-
+class Publication < ActiveRecord::Base
+  belongs_to :article
 
   rails_admin do
     list do
@@ -14,20 +11,17 @@ class Event < ActiveRecord::Base
         end
 
       end
+      field :article
       field :created_at
       field :updated_at
 
     end
     edit do
-      field :title do
-        formatted_value do # used in form views
-          value.to_s.upcase
-        end
-
-      end
+      field :title
       field :description, :text do
         ckeditor true
       end
+      field :article
     end
   end
 end

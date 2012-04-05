@@ -8,6 +8,21 @@ body {
     line-height: 120%;
     background-color: #c0c0c0;
 }
+.content_body{
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Firefox */
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Для Safari и Chrome */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+}
+
+#share{
+    float: left;
+    position: relative;
+    top: 5px;
+    width: 280px;
+}
 
 h1 {
     font-family: arial;
@@ -24,7 +39,7 @@ pre {
     font-size: 11px;
 }
 #advert{width: 960px;
-    margin: 0 auto;
+    margin: 10px auto;
     position: relative;
 }
 #advert iframe{margin: 0 auto !important;
@@ -133,6 +148,7 @@ pre {
     margin: 0 auto;
     width: 100%;
     font-weight:bolder;
+    font-size: 0.815em;
 }
 
 .menu_list a {color:black;}

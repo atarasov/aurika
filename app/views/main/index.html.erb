@@ -12,11 +12,38 @@
   <!--<p>Вы можете отправить свою заявку на<a href="mailto:lexa.tarasov@gmail.ru"> электронный адрес lexa.tarasov@gmail.ru</a></p>-->
 
 </div>
+
+<div id="lastNews">
+  <% if @events.size > 0 %>
+  <h1>Последние новости</h1>
+<% @events.each do |event| %>
+    <div class="content_body">
+      <h3><%= link_to event.title, event %></h3>
+      <%=  event.description.html_safe %>
+
+    </div>
+
+<% end %>
+  <h3><%= link_to "Остальные новости", events_path  %></h3>
+  <% end %>
+  <% if @events.size > 0 %>
+  <h1>Последние статьи</h1>
+  <% @publications.each do |publication| %>
+      <div class="content_body">
+        <h3><%= link_to publication.title, publication %></h3>
+        <%=  publication.description.html_safe %>
+        Раздел: <%= link_to publication.article.name, publications_path  %>
+      </div>
+
+  <% end %>
+  <h3><%= link_to "Остальные статьи", publications_path  %></h3>
+  <% end %>
+</div>
 <script type="text/javascript">
-  window.onload = function () {
-      $("#link_overlay").overlay();
-      $("#link_overlay2").overlay();
-  }
+//  window.onload = function () {
+//      $("#link_overlay").overlay();
+//      $("#link_overlay2").overlay();
+//  }
 </script>
 <!--div class="tiser" id="link_overlay" rel="#advest" onmouseover="openFeedback('advest');">
   <p style="color:red;">Внимание изменение мастер-класса</p>
@@ -33,11 +60,11 @@
 </div>
 
 <div class="tiser2" id="link_overlay2" rel="#advest2" onmouseover="openFeedback('advest2');">
-<%= image_tag "aurika.jpg", :size => "260x367"%>
+<%#= image_tag "aurika.jpg", :size => "260x367"%>
 </div>
 
 <div class="overlay" id="advest2">
-       <%= image_tag "aurika.jpg" %>
+       <%#= image_tag "aurika.jpg" %>
 </div>
 
 <div class="overlay" id="advest">

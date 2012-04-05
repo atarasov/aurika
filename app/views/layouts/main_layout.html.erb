@@ -22,7 +22,9 @@
                              "rails",
                              "jquery.pngFix.pack",
                              "jquery.fancybox",
-                             "jquery.tools.min"
+                             "jquery.tools.min",
+                             "ckeditor/ckeditor",
+                             "ckeditor/config"
   %>
 
   <%= yield :head -%>
@@ -31,6 +33,10 @@
 <body>
 
 <div class="header">
+  <div id="share">
+    <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+    <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="button" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir,gplus"></div>
+  </div>
    <span class="aurika"></span>
 </div>
 <%= render :partial => 'shared/menu' %>

@@ -6,7 +6,9 @@ RailsAdmin.config do |config|
   I18n.default_locale = :ru
 
   config.current_user_method { current_user } # auto-generated
-
+  config.compact_show_view = true
+  #config.excluded_models = ["News"]
+  config.included_models = ["Article", "Contact", "Foto", "Event", "FotoAlbum", "Publication", "User", "Video"]
   # If you want to track changes on your models:
   #config.audit_with :history, User
 
