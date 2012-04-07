@@ -26,16 +26,16 @@
 <% end %>
   <h3><%= link_to "Остальные новости", events_path  %></h3>
   <% end %>
-  <% if @events.size > 0 %>
-  <h1>Последние статьи</h1>
-  <% @publications.each do |publication| %>
-      <div class="content_body">
-        <h3><%= link_to publication.title, publication %></h3>
-        <%=  publication.description.html_safe %>
-        Раздел: <%= link_to publication.article.name, publications_path  %>
-      </div>
+  <% if @publications.size > 0 %>
+      <h1>Последние статьи</h1>
+      <% @publications.each do |publication| %>
+          <div class="content_body">
+            <h3><%= link_to publication.title, publication %></h3>
+            <%= publication.description.html_safe %>
+            Раздел: <%= link_to publication.article.name, publications_path %>
+          </div>
 
-  <% end %>
+      <% end %>
   <h3><%= link_to "Остальные статьи", publications_path  %></h3>
   <% end %>
 </div>
