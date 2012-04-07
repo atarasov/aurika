@@ -31,7 +31,22 @@
   </head>
 
 <body>
+<% if  Rails.env.production?  %>
+<span id="google1">
 
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2687456701853743";
+/* aurika left */
+google_ad_slot = "4407381897";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+  </span>
+      <% end %>
 <div class="header">
   <div id="share">
     <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>

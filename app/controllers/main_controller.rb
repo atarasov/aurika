@@ -1,8 +1,8 @@
 # coding: utf-8
 class MainController < ApplicationController
   def index
-    @events = Event.limit(5)
-    @publications = Publication.limit(5)
+    @events = Event.limit(5).order("created_at DESC")
+    @publications = Publication.limit(5).order("created_at DESC")
   end
 
   def about

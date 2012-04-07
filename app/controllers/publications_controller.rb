@@ -1,6 +1,6 @@
 class PublicationsController < ApplicationController
   def index
-    @publications = Publication.all
+    @publications = Publication.all.order("created_at DESC")
   end
 
   def show

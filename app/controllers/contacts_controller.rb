@@ -5,7 +5,7 @@ class ContactsController < ApplicationController
 
 
   def index
-    @contacts = Contact.all
+    @contacts = Contact.all.order("created_at DESC")
 
     respond_to do |format|
       format.html # index.html.erb

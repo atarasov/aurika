@@ -160,7 +160,12 @@ pre {
 .menu_list ul li, .menu {
     display: inline;
 }
-
+#google1{
+    float: left;
+    left: 15px;
+    position: fixed;
+    top: 15px;
+}
 /*.content{*/
 /*margin:0 auto;*/
 /*padding:25px 0;*/
