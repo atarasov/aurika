@@ -121,6 +121,12 @@ set :repository,      "git://github.com/atarasov/aurika.git"
 #   db_config = "#{shared_path}/database.yml"
 #   run "cp #{db_config} #{release_path}/config/database.yml"
 # end
+#
+after "deploy:update_code", :copy_sape
+task :copy_sape, roles => :app do
+   sape_config = "#{shared_path}/sape"
+   run "ln -s #{sape_config} #{release_path}/public/sape"
+end
 
 ## --- Ниже этого места ничего менять скорее всего не нужно ---
 
