@@ -26,7 +26,7 @@
 <% end %>
   <h3><%= link_to "Остальные новости", events_path  %></h3>
   <% end %>
-  <%= @sape.links %>
+  <%= @sape.links.html_safe %>
   <% if @publications.size > 0 %>
       <h1>Последние статьи</h1>
       <% @publications.each do |publication| %>
