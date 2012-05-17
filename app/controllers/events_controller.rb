@@ -1,6 +1,6 @@
 # coding: utf-8
 class EventsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:index, :show, :new]
+  skip_before_filter :authenticate_user!
 
   def access_denied
     redirect_to root_path
