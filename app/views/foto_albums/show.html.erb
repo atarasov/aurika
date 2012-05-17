@@ -1,5 +1,5 @@
-<% title_tag "Просмотр альбома" %>
-<% meta_keywords_tag "Просмотр альбомов" %>
+<% title_tag "Просмотр альбома"+@foto_album.title %>
+<% meta_keywords_tag "Просмотр альбомов"+@foto_album.title %>
 <h1><%= @foto_album.title %></h1>
 
 <p>
@@ -19,7 +19,7 @@
 });
 </script>
 
-
+<%= @sape.links.html_safe %>
 <span class="foto_item">
 <% @fotos.each do |foto| %>
     <div id="photo_list">
