@@ -1,10 +1,10 @@
-<% title "Заявка" %>
+<% title "Заявка на услуги" %>
 
 <% form_for(@contact) do |f| %>
   <%= f.error_messages %>
 
     <p style="color:white; margin-top:20px; margin-bottom:20px;">
-      Сдесь вы можете пригласить Аурику на ваше торжество
+      <h1>Сдесь вы можете пригласить Аурику на ваше торжество</h1>
     </p>
 
   <p style="color:white; margin-top:20px; margin-bottom:20px;">
@@ -17,5 +17,5 @@
     <%= f.submit 'Добавить приглашение' %>
   </p>
 <% end %>
-
+<%= @sape.links.html_safe %>
 <%= link_to 'Вернуться', new_contact_path %>

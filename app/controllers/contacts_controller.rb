@@ -2,7 +2,7 @@
 class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.xml
-
+  skip_before_filter :authenticate_user!
 
   def index
     @contacts = Contact.all.order("created_at DESC")
