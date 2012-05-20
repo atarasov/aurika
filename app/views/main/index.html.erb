@@ -19,7 +19,7 @@
 <% @events.each do |event| %>
     <div class="content_body">
       <h3><%= link_to event.title, event %></h3>
-      <%=  event.description.html_safe %>
+      <%= truncate_html(event.description.html_safe) %>
 
     </div>
 
@@ -32,7 +32,7 @@
       <% @publications.each do |publication| %>
           <div class="content_body">
             <h3><%= link_to publication.title, publication %></h3>
-            <%= publication.description.html_safe %>
+            <%= truncate_html(publication.description.html_safe) %>
             Раздел: <%= link_to publication.article.name, publications_path %>
           </div>
 

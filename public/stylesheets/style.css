@@ -366,3 +366,18 @@ pre {
 	height:35px;
 	width:35px;
 }
+.publications{
+    float: left;
+    left: -60px;
+    position: relative;
+    width: 550px;
+}
+.articles{
+    float: right;
+    width: 140px;
+}
+.articles li{list-style: none;}
+.articles ul {padding-left: 15px;}
+.articles a {
+    color: black;
+}
