@@ -44,7 +44,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(params[:contact])
    @contact.save!
-    SupportMailerMailer.contact_confirmation(@contact).deliver
+    SupportMailer.contact_confirmation(@contact).deliver
         flash[:notice] = 'Ваше приглашение отправленно!'
          redirect_to root_url 
 
