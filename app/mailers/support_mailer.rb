@@ -1,3 +1,4 @@
+# coding: utf-8
 class SupportMailer < ActionMailer::Base
   default :from => "support@aurika-curkan.ru"
 

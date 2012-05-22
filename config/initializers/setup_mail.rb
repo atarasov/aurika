@@ -1,3 +1,4 @@
+# coding: utf-8
 ActionMailer::Base.smtp_settings = {
     :address              => "smtp.locum.ru",
     :port                 => 25,

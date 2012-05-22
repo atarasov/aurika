@@ -1,3 +1,4 @@
+# coding: utf-8
 # Programmed by Dmitry Root
 # mailto:droot@deeptown.org
 # http://www.sape.ru/r.2f99c56437.php
