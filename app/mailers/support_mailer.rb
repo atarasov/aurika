@@ -4,6 +4,6 @@ class SupportMailer < ActionMailer::Base
 
   def contact_confirmation(contact)
     @contact = contact
-    mail(:to => "lexa.tarasov@gmail.com", :subject => "Новое приглашение")
+    mail(:to => "richie76@mail.ru", :subject => "Новое приглашение")
   end
 end
