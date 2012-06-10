@@ -1,7 +1,9 @@
+# coding: utf-8
 class Publication < ActiveRecord::Base
   belongs_to :article
 
   rails_admin do
+    label "Публикации"
     list do
       field :title
 

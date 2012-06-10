@@ -5,6 +5,7 @@ class Event < ActiveRecord::Base
 
 
   rails_admin do
+    label "Новости"
     list do
       field :title
 
