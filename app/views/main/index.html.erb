@@ -1,8 +1,8 @@
 <span class="logo"></span>
 <div class="hello">
   <p>Я, Аурика Цуркан.</p>
-  <p>Добро пожаловать на мой сайт!</p>
-  <p>Здесь вы сможете познакомиться с различными направлениями арабского танца, зайдя в раздел
+  <p>Добро пожаловать на сайт посвященный восточным танцам</p>
+  <p>Здесь вы сможете познакомиться с различными направлениями восточного танца пензы, зайдя в раздел
   <%= link_to "'Фотоальбомы'", foto_albums_path %>
   <%= link_to "Видео", videos_path %>
   </p>
@@ -15,7 +15,7 @@
 
 <div id="lastNews">
   <% if @events.size > 0 %>
-  <h1>Последние новости</h1>
+  <h1>Новости восточного танца в Пензе</h1>
 <% @events.each do |event| %>
     <div class="content_body">
       <h3><%= link_to event.title, event %></h3>
@@ -26,13 +26,13 @@
 <% end %>
   <h3><%= link_to "Остальные новости", events_path  %></h3>
   <% end %>
-  <%= @sape.links.html_safe %>
+  <%#= @sape.links.html_safe %>
   <% if @publications.size > 0 %>
-      <h1>Последние статьи</h1>
+      <h1>Публикации посвященные восточному танцу</h1>
       <% @publications.each do |publication| %>
           <div class="content_body">
             <h3><%= link_to publication.title, publication %></h3>
-            <%= truncate publication.description.html_safe.gsub(/<\/?[^>]*>/, "") , :length => 300, :omission => '...' %>
+            <%= truncate publication.description.html_safe.gsub(/<\/?[^>]*>/, "") , :length => 300, :omission => '...' %><br/>
             Раздел: <%= link_to publication.article.name, publications_path %>
           </div>
 
