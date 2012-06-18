@@ -7,8 +7,8 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="google-site-verification" content="-1z544lkpdl8q56AAGEc9jm0j8fY-iQMpWXFM8fcOIE" />
-  <meta name="keywords" content="Аурика Цуркан,  восточные танцы Пенза, Бахор Пенза, школа восточного танца бахор, Аурика пенза, пензенская федерация восточного танца"/>
-  <meta name="description" content="Аурика Цуркан,  восточные танцы Пенза, Бахор Пенза, школа восточного танца бахор, Аурика пенза, пензенская федерация восточного танца"/>
+  <meta name="keywords" content="Аурика Цуркан,  восточные танцы в пензе, восточные танцы Пенза, Бахор Пенза, школа восточного танца бахор, Аурика пенза, пензенская федерация восточного танца"/>
+  <meta name="description" content="Аурика Цуркан,  восточные танцы в пензе, восточные танцы Пенза, Бахор Пенза, школа восточного танца бахор, Аурика пенза, пензенская федерация восточного танца"/>
   <meta name='yandex-verification' content='64f98bb3fc5121ec' />
 
   <%= stylesheet_link_tag "style" %>
@@ -31,7 +31,8 @@
   </head>
 
 <body>
-<% if  Rails.env.production?  %>
+<%= auto_discovery_link_tag(:rss, "/events.rss") %>
+<% if false && Rails.env.production?  %>
 <span id="google1">
 
 <script type="text/javascript"><!--
@@ -62,7 +63,7 @@ google_ad_height = 600;
       <%= yield %>
       </div>
 </div>
-<% if  Rails.env.production?  %>
+<% if false && Rails.env.production?  %>
 <div id="advert">
 <script type="text/javascript"><!--
 google_ad_client = "ca-pub-2687456701853743";
