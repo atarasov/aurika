@@ -288,7 +288,7 @@ pre {
 	min-height:200px;
 	border:1px solid #666;
     color:#FFFFFF;
-    position: absolute;
+    position: absolute !important;
 	/* CSS3 styling for latest browsers */
 	-moz-box-shadow:0 0 15px 3px #000;
 	-webkit-box-shadow: 0 0 15px #000;
