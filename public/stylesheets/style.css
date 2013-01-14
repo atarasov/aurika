@@ -288,7 +288,7 @@ pre {
 	min-height:200px;
 	border:1px solid #666;
     color:#FFFFFF;
-
+    position: absolute;
 	/* CSS3 styling for latest browsers */
 	-moz-box-shadow:0 0 15px 3px #000;
 	-webkit-box-shadow: 0 0 15px #000;
@@ -312,8 +312,8 @@ pre {
     background-color: white;
     cursor:pointer;
     left: 5px;
-    position: absolute;
-    top: 60px;
+    position: fixed;
+    top: 152px;
     width: 300px;
     padding: 20px;
     border-radius: 10px;
@@ -325,9 +325,9 @@ pre {
     border-radius: 10px;
     -moz-border-radius: 10px 10px 10px 10px;
     float: right;
-    left: 170px;
-    position: relative;
-    top: -627px;
+    right: 1px;
+    position: fixed;
+    top: 152px;
     width: 300px;
 }
 

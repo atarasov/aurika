@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   layout "main_layout"
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
-  before_filter :authenticate_user!, :except => [:index, :show, :about, :about_dance, :help, :payment, :schedule, :camp_sheld]
+  before_filter :authenticate_user!, :except => [:index, :show, :about, :about_dance, :help, :payment, :schedule, :camp_scheld]
   before_filter :sape_init
 
   def sape_init

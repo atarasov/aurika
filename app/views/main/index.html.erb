@@ -40,40 +40,43 @@
   <h3><%= link_to "Остальные статьи", publications_path  %></h3>
   <% end %>
 </div>
+
 <script type="text/javascript">
-//  window.onload = function () {
-//      $("#link_overlay").overlay();
-//      $("#link_overlay2").overlay();
-//  }
+  window.onload = function () {
+      $("#link_overlay").overlay();
+      $("#link_overlay2").overlay();
+  }
 </script>
-<!--div class="tiser" id="link_overlay" rel="#advest" onmouseover="openFeedback('advest');">
-  <p style="color:red;">Внимание изменение мастер-класса</p>
-10-11 марта 2012 - 2 открытый рейтинговый чемпионат Пензенской области по Танцу живота.
-  <p style="color:red;">Регистрация закрыта.</p>
+<% content_for :adverts do %>
+
+
+<div class="tiser" id="link_overlay" rel="#advest" onmouseover="openFeedback('advest');">
+2-3 марта 2013 - 3 открытый рейтинговый чемпионат Пензенской области по Танцу живота.
+  <p style="color:red;">Регистрация открыта.</p>
 
   <p>C участием:</p>
   <p>Елены Рамазановой</p>
 
-  <p> Вилены</p>
+  <p> Наталии Фадда</p>
 
   <p>А так же коллективов г.Самара, г.Пензы и других городов России. </p>
   <p>Узнать больше >> </p>
 </div>
 
 <div class="tiser2" id="link_overlay2" rel="#advest2" onmouseover="openFeedback('advest2');">
-<%#= image_tag "aurika.jpg", :size => "260x367"%>
+<%= image_tag "aurika.jpg", :size => "260x367" %>
 </div>
 
 <div class="overlay" id="advest2">
-       <%#= image_tag "aurika.jpg" %>
+       <%= image_tag "aurika.jpg", :size => "600x800"  %>
 </div>
 
 <div class="overlay" id="advest">
-  <p style="color:red;">Внимание вместо мастер-класcа Ясмин будет проведен мастер-класс Вилены - Модерн(Танец Делает Музыку Видимой!)</p>
+
   <p>Пензенская федерация восточного танца совместно с Лигой профессионалов восточного танца(г. Москва) представляет</p>
 
-  <p> 10-11 марта 2012 ЦХИ(д/к 40-лет Октября) 2 открытый рейтинговый чемпионат Пензенской области по Танцу живота</p>
-  <p style="color:red;">Регистрация закрыта.</p>
+  <p> 2-3 марта 2013 ЦХИ(д/к 40-лет Октября) 3 открытый рейтинговый чемпионат Пензенской области по Танцу живота</p>
+  <p style="color:red;">Регистрация открыта.</p>
 
   <p>В рамках чемпионата мастер классы лучших преподавателей по танцу живота:</p>
 
@@ -81,7 +84,7 @@
   <p>Президента Лиги профессионалов восточного танца
     <a href="http://www.bellydance.ru/dancers/foto17.shtml">Елены Рамазановой</a> г.Москва(Россия)</p>
 
-  <p> Преподавателя лиги профессионалов восточного танца Вилены г.Москва(Россия)<</p>
+  <p> Преподавателя лиги профессионалов восточного танца Наталия Фадда</p>
 
   <p>В программе гала шоу "Магия востока" с участием звезд: Елены Рамазановой, Вилены</p>
 
@@ -91,18 +94,18 @@
     новости</p>
 
   <p>Условия участия в конкурсах: </p>
-  <p><a href="http://www.bellydanceliga.ru/index.php/2011-01-09-12-57-23">Рейтинговые номинации</a></p>
-  <p><a href="http://www.bellydanceliga.ru/index.php/2011-01-09-12-59-59">Не рейтинговые номинации</a></p>
+  <p><a href="/pravila.docx">Правила участия</a></p>
+
 
 
   <table>
 
     <tr>
-      <td align="center">
-        <p>Вилена</p>
-        <img src="images/vilena.jpg" alt="Дарья Мицкевич" width="450px" style="border-radius:10px; -moz-border-radius: 10px 10px 10px 10px;">
+      <!--<td align="center">-->
+        <!--<p>Вилена</p>-->
+        <!--<img src="images/vilena.jpg" alt="Дарья Мицкевич" width="450px" style="border-radius:10px; -moz-border-radius: 10px 10px 10px 10px;">-->
 
-      </td>
+      <!--</td>-->
       <td align="center">
         <p>Елена Рамазанова</p>
         <img src="images/elena.jpg" alt="Елена Рамазанова" width="250px" style="border-radius:10px; -moz-border-radius: 10px 10px 10px 10px;">
@@ -112,4 +115,5 @@
 
     </tr>
   </table>
- </div-->
+ </div>
+<% end %>
