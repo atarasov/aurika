@@ -6,7 +6,7 @@ gem 'will_paginate'
 gem 'russian'
 #gem 'uploadify'
 #gem 'rmagick'
-gem 'paperclip'
+gem 'paperclip', "~> 3.0"
 gem 'machinist'
 #gem 'faker'
 gem 'mysql2', '~> 0.2.7'
